@@ -1,8 +1,10 @@
-title{
-    color: black;
-    font-size: 4em;
-}
+
 body {
  background-color: #7ac7bf;
  margin: 2em;
+}
+
+.title{
+    font-size: 2em;
+    color: black;
 }
