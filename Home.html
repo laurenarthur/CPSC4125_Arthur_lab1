@@ -23,13 +23,13 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">New To-Do:</span>
   </div>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  <input type="text" id="userinput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
 
-    <button id="addButton" type="button" class="btn btn-outline-success">ADD</button>
+    <button onclick="addFunction()" id="addButton" type="button" class="btn btn-outline-success">ADD</button>
     <button id="removeButton" type="button" class="btn btn-outline-danger">REMOVE</button>
 
-    <ul class="list-group">
+    <ul class="list-group" id ="mylist">
   <li class="list-group-item">Pick up dry cleaning</li>
   <li class="list-group-item">Go through car wash</li>
   <li class="list-group-item">Find new throw pillows for couch</li>
