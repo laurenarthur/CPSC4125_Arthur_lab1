@@ -13,20 +13,23 @@
   </head>
   <body>
 
+    <h1>Lauren Arthur</h1>
     <ul class="nav justify-content-center">
   <li class="nav-item">
     <a class="nav-link active title" href="#">TO-DO List</a>
   </li> 
     </ul>
 
-    <div class="input-group mb-3" id="userinput">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-default">New To-Do:</span>
-  </div>
-  <input type="text" id="userinput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <div class="input-group mb-3" >
+      <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">New To-Do:</span>
+     </div>
+
+    <input type="text" id="userInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+
     </div>
 
-    <button onclick="addFuncion(mylist)" id="addButton" type="button" class="btn btn-outline-success">ADD</button>
+    <input id="addButton" value="ADD" type="button" class="btn btn-outline-success"></button>
     <button id="removeButton" type="button" class="btn btn-outline-danger">REMOVE</button>
 
     <ul class="list-group" id ="mylist">
@@ -36,6 +39,7 @@
   <li class="list-group-item">Get Groceries </li>
   <li class="list-group-item">Pick a movies for movie night</li>
     </ul>
+
     
     
     <!-- Optional JavaScript -->
@@ -47,5 +51,17 @@
     <!--Imported the JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 
+  <script type="text/javascript">
+  	document.getElementById("addButton").onclick = function(){
+	var UserInput = document.getElementById("userInput").value;
+	var li = "<li>" + UserInput + "</li>";
+
+	document.getElementById("mylist").innerHTML +=li;
+	document.getElementById("userInput").value = "";
+	}
+  </script>
+
+
   </body>
+</html>
 </html>
