@@ -26,7 +26,7 @@
   <input type="text" id="userinput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
 
-    <button onclick="addFunction()" id="addButton" type="button" class="btn btn-outline-success">ADD</button>
+    <button onclick="addFuncion(mylist)" id="addButton" type="button" class="btn btn-outline-success">ADD</button>
     <button id="removeButton" type="button" class="btn btn-outline-danger">REMOVE</button>
 
     <ul class="list-group" id ="mylist">
@@ -37,7 +37,21 @@
   <li class="list-group-item">Pick a movies for movie night</li>
     </ul>
 
-    <script src="javascript.js"></script>
+    <script>
+    function addFunction(mylist){
+    var text = "";
+    var inputs = document.querySelectorAll("userinput");
+    for (var i = 0; i < inputs.length; i++) {
+        text += inputs[i].value;
+    }
+    var li = document.createElement("li");
+    var node = document.createTextNode(text);
+    li.appendChild(node);
+    document.getElementById("mylist").appendChild(li);
+      //var li = <li> + Array + </li>;
+      //document.getElementById("mylist").appendChild(li);
+  }</script>
+    
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

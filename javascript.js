@@ -1,20 +1,17 @@
 
 $(document).ready(function() {
 
-  var UserInput = document.getElementById("userinput").value;
 
-  var array = [UserInput];
-
-  function addFunction(){
-    var list = document.createElement('ul');
-    for(i=0;array.length;i++){
-        var item = document.createElement('li');
-        item.appendChild(document.createTextNode(array[i]));
-
-        list.appendChild(item);
-
+  function addFunction(mylist){
+    var text = "";
+    var inputs = document.querySelectorAll("userinput");
+    for (var i = 0; i < inputs.length; i++) {
+        text += inputs[i].value;
     }
-    return mylist;
+    var li = document.createElement("li");
+    var node = document.createTextNode(text);
+    li.appendChild(node);
+    document.getElementById("mylist").appendChild(li);
       //var li = <li> + Array + </li>;
       //document.getElementById("mylist").appendChild(li);
   }
