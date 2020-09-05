@@ -13,7 +13,6 @@
   </head>
   <body>
 
-    <h1>Lauren Arthur</h1>
     <ul class="nav justify-content-center">
   <li class="nav-item">
     <a class="nav-link active title" href="#">TO-DO List</a>
@@ -26,11 +25,18 @@
      </div>
 
     <input type="text" id="userInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
 
+    <div class="input-group mb-3" >
+      <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Delete a TO-DO:</span>
+     </div>
+
+    <input type="text" id="userInputtoDelete" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
 
     <input id="addButton" value="ADD" type="button" class="btn btn-outline-success"></button>
-    <button id="removeButton" type="button" class="btn btn-outline-danger">REMOVE</button>
+    <input id="removeButton" value="REMOVE" type="button" class="btn btn-outline-danger"></button>
 
     <ul class="list-group" id ="mylist">
   <li class="list-group-item">Pick up dry cleaning</li>
@@ -51,9 +57,9 @@
     <!--Imported the JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 
-  <script src="javascript.js" </script>
+  <script src="javascript.js">
+  </script>
 
 
   </body>
-</html>
 </html>
