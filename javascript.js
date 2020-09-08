@@ -1,3 +1,23 @@
+
+var myNodelist = document.getElementsByTagName("li");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
 document.getElementById("addButton").onclick = function(){
 	var UserInput = document.getElementById("userInput").value;
 	var li = document.createElement("li");
@@ -5,20 +25,19 @@ document.getElementById("addButton").onclick = function(){
 	li.innerText = UserInput;
 
 	document.getElementById("mylist").appendChild(li);
-	document.getElementById("userInput").value = "";
-}
+    document.getElementById("userInput").value = "";
+    
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
 
-document.getElementById("removeButton").onclick = function(){
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById('userInputtoDelete');
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("mylist");
-    li = ul.getElementsByTagName('li');
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < li.length; i++) {
-        a = li[i];
-        if (a.textContent.toUpperCase().indexOf(filter) > -1) {
-        li[i].style.display="none"
-        } 
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
     }
 }
+}
+
